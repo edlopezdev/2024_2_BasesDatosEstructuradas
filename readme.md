@@ -1,6 +1,5 @@
 ## Docente 
-    Eugenio Bravo 
-
+    Edgar López
 ## Asignatura 
     Bases De Datos Estructuradas
 
