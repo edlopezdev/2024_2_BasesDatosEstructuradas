@@ -28,7 +28,7 @@ Modalidad de Enseñanza
 
 - `***.sql`: Archivo con las soluciones a los ejercicios propuestos.
 
-## Ejercicios Prácticos 20240812
+## Ejercicios Prácticos Clase 1
 1. Creación de Tablas
 Descripción:
     Crea una tabla llamada Estudiantes que contenga las siguientes columnas:
@@ -81,7 +81,7 @@ Muestra todos los libros escritos por el autor con ID 1.
 Cambia la nacionalidad del autor con ID 2 a "Peruana".
 
 
-## Ejercicios Prácticos 20240813
+## Ejercicios Prácticos Clase 2
 
 6. **Creación de una Función**: 
     - Descripción: Crea una función `fn_CantidadEstudiantes` que devuelva el número total de estudiantes.
@@ -141,7 +141,7 @@ Cambia la nacionalidad del autor con ID 2 a "Peruana".
 5. **Función para Calcular la Edad Mínima**:
    - Desarrolla una función llamada `fn_EdadMinimaEstudiantes` que devuelva la edad mínima de los estudiantes.
 
-## Ejercicios Prácticos 20240819
+## Ejercicios Prácticos Clase 3
 
 ### Ejercicios con Solución
 
