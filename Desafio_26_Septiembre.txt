@@ -1,14 +1,21 @@
 Desafío: Sistema de Gestión de Reservas de Salas
 Contexto:
-Una empresa tiene varias salas de reuniones que se pueden reservar por los empleados. Cada sala tiene diferentes características (capacidad, equipo disponible, etc.), y las reservas deben cumplir con ciertas reglas (por ejemplo, no se pueden reservar salas de mayor capacidad si una de menor capacidad está disponible).
+Una empresa tiene varias salas de reuniones que se pueden reservar por los empleados. 
+Cada sala tiene diferentes características (capacidad, equipo disponible, etc.), y las reservas deben cumplir con 
+ciertas reglas (por ejemplo, no se pueden reservar salas de mayor capacidad si una de menor capacidad está disponible).
 Requerimientos:
 Tablas y Vistas:
-Tablas: Crear las tablas necesarias para almacenar información sobre las salas (ID, nombre, capacidad, equipo disponible) y las reservas (ID, sala, empleado, fecha y hora de inicio, fecha y hora de término).
-Vistas: Crear una vista que muestre las salas disponibles en un rango de tiempo específico, excluyendo aquellas que ya están reservadas.
+Tablas: Crear las tablas necesarias para almacenar información sobre las salas (ID, nombre, capacidad, equipo disponible)
+y las reservas (ID, sala, empleado, fecha y hora de inicio, fecha y hora de término).
+Vistas: Crear una vista que muestre las salas disponibles en un rango de tiempo específico, 
+excluyendo aquellas que ya están reservadas.
 Índices:
-Crear índices adecuados para optimizar las consultas relacionadas con la búsqueda de salas disponibles y la verificación de conflictos de reservas.
+Crear índices adecuados para optimizar las consultas relacionadas con la búsqueda de salas disponibles 
+y la verificación de conflictos de reservas.
 Procedimientos Almacenados:
-Desarrollar un procedimiento almacenado que permita reservar una sala. Este procedimiento debe verificar primero si la sala está disponible en el rango de tiempo solicitado y, si está disponible, realizar la reserva.
+Desarrollar un procedimiento almacenado que permita reservar una sala. 
+Este procedimiento debe verificar primero si la sala está disponible en el rango de tiempo solicitado y, 
+si está disponible, realizar la reserva.
 Desarrollar un procedimiento almacenado que permita cancelar una reserva y libere la sala.
 Funciones:
 Crear una función que calcule el número total de horas reservadas por un empleado en un mes específico.
@@ -17,4 +24,5 @@ Restricciones:
 No se permite usar la misma sala para dos reservas simultáneas.
 Las funciones y procedimientos deben manejar correctamente la concurrencia para evitar inconsistencias en los datos.
 Entrega:
-Los estudiantes deben entregar el script SQL que crea la base de datos, las tablas, vistas, índices, funciones y procedimientos almacenados.Deben incluir ejemplos de uso y resultados esperados para probar cada función y procedimiento.
+Los estudiantes deben entregar el script SQL que crea la base de datos, las tablas, vistas, índices, funciones y procedimientos almacenados.
+Deben incluir ejemplos de uso y resultados esperados para probar cada función y procedimiento.
