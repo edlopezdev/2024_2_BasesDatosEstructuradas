@@ -209,6 +209,71 @@ Cambia la nacionalidad del autor con ID 2 a "Peruana".
 
 5. **Función para Calcular la Edad de los Empleados**:
    - **Descripción**: Desarrolla una función `fn_EdadEmpleado` que devuelva la edad actual de un empleado basado en su fecha de nacimiento.
+  
+# Clase 4: Procedimientos Almacenados Básicos - Ejercicios
+
+## Ejercicio 1: Actualización Automática de Stock
+
+**Problema:**
+
+En la base de datos de la empresa, cada vez que se recibe una nueva entrega de productos, el stock debe actualizarse manualmente en la tabla `Productos`. Esto es tedioso y propenso a errores.
+
+**Tu Tarea:**
+
+Desarrollar un **procedimiento almacenado** que permita actualizar automáticamente el stock de un producto cuando se recibe una nueva entrega. El procedimiento debe:
+
+1. **Recibir como parámetros** el identificador del producto (`@ProductoID`) y la cantidad de unidades recibidas (`@Cantidad`).
+2. **Sumar la cantidad recibida** al stock actual del producto.
+3. **Actualizar el registro del producto** en la tabla `Productos` con el nuevo valor de stock.
+
+**Requisitos:**
+
+- Asegúrate de que el procedimiento maneje correctamente los casos en que el `ProductoID` no existe.
+- Considera cómo este procedimiento podría integrarse en el sistema de inventario actual para mejorar la eficiencia.
+
+---
+
+## Ejercicio 2: Registro de Nuevo Pedido
+
+**Problema:**
+
+La empresa quiere automatizar el proceso de registro de nuevos pedidos en su base de datos. Actualmente, este proceso se realiza manualmente, lo que puede generar errores en la entrada de datos y retrasos en el procesamiento de pedidos.
+
+**Tu Tarea:**
+
+Desarrollar un **procedimiento almacenado** que permita registrar un nuevo pedido en la tabla `Pedidos`. El procedimiento debe:
+
+1. **Recibir como parámetros** el identificador del cliente (`@ClienteID`) y la fecha del pedido (`@FechaPedido`).
+2. **Insertar un nuevo registro** en la tabla `Pedidos` con los datos proporcionados y establecer el estado inicial del pedido como 'Pendiente'.
+3. **Generar automáticamente un identificador único para el pedido** utilizando una columna de tipo `IDENTITY`.
+
+**Requisitos:**
+
+- Asegúrate de que el procedimiento maneje casos en que el `ClienteID` no existe o no es válido.
+- Considera cómo este procedimiento puede ser utilizado en un sistema más amplio de gestión de pedidos.
+
+---
+
+## Ejercicio 3: Consulta de Pedidos por Cliente
+
+**Problema:**
+
+El equipo de ventas de la empresa necesita poder consultar rápidamente todos los pedidos asociados a un cliente específico para revisar el historial de compras y el estado actual de los pedidos.
+
+**Tu Tarea:**
+
+Desarrollar un **procedimiento almacenado** que permita consultar todos los pedidos de un cliente dado. El procedimiento debe:
+
+1. **Recibir como parámetro** el identificador del cliente (`@ClienteID`).
+2. **Devolver un conjunto de resultados** que incluya todos los pedidos asociados a ese cliente, con detalles como la fecha del pedido y el estado actual.
+
+**Requisitos:**
+
+- Asegúrate de que el procedimiento maneje casos en que el `ClienteID` no existe, devolviendo un mensaje adecuado.
+- Considera cómo este procedimiento podría integrarse en un sistema de CRM (Customer Relationship Management) para mejorar la experiencia del cliente.
+
+---
+
 
 
 
