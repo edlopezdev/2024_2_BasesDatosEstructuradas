@@ -273,8 +273,24 @@ Desarrollar un **procedimiento almacenado** que permita consultar todos los pedi
 - Considera cómo este procedimiento podría integrarse en un sistema de CRM (Customer Relationship Management) para mejorar la experiencia del cliente.
 
 ---
+## Clase 5: Triggers en Bases de Datos
 
+### Descripción de la Clase
+En esta clase, exploraremos los **triggers** en SQL, una herramienta fundamental para automatizar tareas y asegurar la integridad de los datos dentro de una base de datos. Los triggers se ejecutan automáticamente en respuesta a eventos específicos, como inserciones, actualizaciones o eliminaciones de registros.
 
+### Contenido de la Clase
+
+1. **Presentación Teórica:**
+   - Definición de triggers y su utilidad en bases de datos.
+   - Tipos de triggers: AFTER e INSTEAD OF.
+   - Ejemplos prácticos de triggers para auditoría y validación de datos.
+
+2. **Ejemplos Prácticos:**
+   - Creación de un trigger para auditar inserciones en la tabla `Clientes`.
+   - Creación de un trigger para validar que el stock de un producto no sea negativo.
+
+3. **Ejercicio Práctico en Clase:**
+   - Crear un trigger que actualice automáticamente el estado de un pedido a "Completado" cuando todos los productos del pedido están disponibles en stock.
 
 
 ## Contribuciones
