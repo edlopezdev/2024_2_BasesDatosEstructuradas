@@ -292,6 +292,64 @@ En esta clase, exploraremos los **triggers** en SQL, una herramienta fundamental
 3. **Ejercicio Práctico en Clase:**
    - Crear un trigger que actualice automáticamente el estado de un pedido a "Completado" cuando todos los productos del pedido están disponibles en stock.
 
+## Ejercicio 4: Calcular el Total de un Pedido
+
+**Problema:**
+
+La empresa necesita calcular automáticamente el total de cada pedido para que pueda ser utilizado en la facturación y en los reportes. El total de un pedido es la suma del precio de cada producto multiplicado por la cantidad solicitada de ese producto.
+
+**Tu Tarea:**
+
+Desarrollar un **procedimiento almacenado** que reciba el `PedidoID` como parámetro y calcule el total del pedido. El total debe ser almacenado en la tabla `Pedidos` en una nueva columna llamada `Total`.
+
+---
+
+## Ejercicio 5: Registrar Cambios de Estado de un Pedido
+
+**Problema:**
+
+La empresa desea mantener un registro histórico de los cambios de estado de cada pedido para fines de auditoría. Cada vez que se cambia el estado de un pedido, se debe registrar el cambio en una tabla separada.
+
+**Tu Tarea:**
+
+Desarrollar un **trigger** que registre cada cambio de estado en una tabla llamada `HistorialEstadoPedidos`.
+
+---
+
+## Ejercicio 6: Productos Más Vendidos
+
+**Problema:**
+
+La empresa quiere conocer cuáles son los productos más vendidos para tomar decisiones sobre el inventario y las promociones.
+
+**Tu Tarea:**
+
+Desarrollar un **procedimiento almacenado** que devuelva una lista de los productos más vendidos, ordenados por la cantidad total vendida.
+
+---
+
+## Ejercicio 7: Actualizar el Stock Después de un Pedido
+
+**Problema:**
+
+Cada vez que se confirma un pedido, el stock de los productos correspondientes debe reducirse en función de las cantidades solicitadas.
+
+**Tu Tarea:**
+
+Desarrollar un **trigger** que se active después de la confirmación de un pedido y actualice el stock de los productos involucrados.
+
+---
+
+## Ejercicio 8: Notificación de Stock Bajo
+
+**Problema:**
+
+La empresa necesita recibir alertas cuando el stock de cualquier producto baja por debajo de un cierto umbral para reordenar el inventario.
+
+**Tu Tarea:**
+
+Desarrollar un **trigger** que verifique el stock después de cada actualización y notifique (por ejemplo, con un `PRINT` o `RAISERROR`) si el stock está por debajo del umbral definido.
+
 
 ## Contribuciones
 Las contribuciones a este repositorio son bienvenidas. Si tienes sugerencias para mejorar los ejercicios, por favor, crea un pull request o abre un issue.
