@@ -350,6 +350,26 @@ La empresa necesita recibir alertas cuando el stock de cualquier producto baja p
 
 Desarrollar un **trigger** que verifique el stock después de cada actualización y notifique (por ejemplo, con un `PRINT` o `RAISERROR`) si el stock está por debajo del umbral definido.
 
+# Ejercicios de SQL - Clase de Transacciones y Manejo de Errores
+
+## Ejercicio 1: Manejo de Transacciones
+Crea un procedimiento almacenado llamado `InsertarPedido` que realice una transacción. El procedimiento debe:
+- Insertar un nuevo pedido en la tabla `Pedidos`.
+- Actualizar el stock del producto en la tabla `Productos`.
+- Si el stock es menor que 0 después de la actualización, debe deshacer la transacción (rollback).
+
+## Ejercicio 2: Auditoría con Triggers
+Crea un trigger llamado `trg_ActualizarStock` que registre en una tabla de auditoría cada vez que se actualice el stock en la tabla `Productos`.
+
+## Ejercicio 3: Consultas SQL Avanzadas
+1. Mostrar todos los productos que han tenido un cambio de stock registrado en la auditoría, ordenados por la fecha del cambio más reciente.
+2. Mostrar todos los pedidos realizados por un cliente específico en el último mes, junto con los productos y cantidades asociadas.
+
+## Ejercicio 4: Manejo de Errores con Procedimientos Almacenados
+Crea un procedimiento almacenado llamado `InsertarCliente` que verifique si ya existe un cliente con el mismo correo electrónico. Si es así, debe lanzar un error y no insertar el registro.
+
+
+
 
 ## Contribuciones
 Las contribuciones a este repositorio son bienvenidas. Si tienes sugerencias para mejorar los ejercicios, por favor, crea un pull request o abre un issue.
