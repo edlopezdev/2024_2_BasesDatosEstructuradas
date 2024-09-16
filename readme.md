@@ -368,6 +368,29 @@ Crea un trigger llamado `trg_ActualizarStock` que registre en una tabla de audit
 ## Ejercicio 4: Manejo de Errores con Procedimientos Almacenados
 Crea un procedimiento almacenado llamado `InsertarCliente` que verifique si ya existe un cliente con el mismo correo electrónico. Si es así, debe lanzar un error y no insertar el registro.
 
+# Ejercicios Adicionales: Seguridad en Bases de Datos
+
+## Ejercicio 4: Creación de un Rol de Solo Lectura para Ventas
+- **Objetivo**: Crear un rol que permita solo la lectura de la tabla `Ventas`.
+- **Instrucciones**:
+  1. Crear un rol llamado `lectura_ventas`.
+  2. Asignar permisos de `SELECT` en la tabla `Ventas` al rol `lectura_ventas`.
+  3. Crear un nuevo usuario `UsuarioVentas` y asignarle el rol `lectura_ventas`.
+  4. Probar el acceso del usuario intentando ejecutar una consulta `SELECT` y una operación `INSERT` en la tabla `Ventas`.
+
+## Ejercicio 5: Restricción de Eliminación de Clientes con Ventas
+- **Objetivo**: Implementar un trigger que impida la eliminación de clientes si tienen ventas registradas.
+- **Instrucciones**:
+  1. Crear un trigger en la tabla `Clientes` que se ejecute antes de una eliminación.
+  2. El trigger debe verificar si el cliente tiene ventas asociadas en la tabla `Ventas`.
+  3. Si tiene ventas, cancelar la operación de eliminación y mostrar un mensaje de error.
+
+## Ejercicio 6: Implementación de Auditoría para Actualizaciones en Ventas
+- **Objetivo**: Implementar un mecanismo de auditoría que registre cada vez que se actualice el total de una venta.
+- **Instrucciones**:
+  1. Crear una tabla de auditoría `AuditoriaActualizacionesVentas` para registrar las actualizaciones.
+  2. Crear un trigger en la tabla `Ventas` que se ejecute después de una actualización.
+  3. El trigger debe insertar un registro en la tabla de auditoría con el `VentaID`, el total anterior, el total nuevo, y la fecha de la actualización.
 
 
 
