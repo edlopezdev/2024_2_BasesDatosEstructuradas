@@ -122,3 +122,40 @@ VALUES
 -- Objetivo: Crear un trigger que registre en una tabla de auditoría cada vez que se inserte un nuevo producto.
 -- 1. Crear una tabla llamada 'AuditoriaProductos' que registre el ID del producto, su nombre, precio y la fecha de inserción.
 -- 2. Implementar un trigger que capture la inserción en la tabla Productos y registre los datos en la tabla de auditoría.
+--AYUDA MEMORIA PARA CREACION DE TRIGGER DE AUDIORIA 
+CREATE TRIGGER trg_AuditoriaCompleta
+ON Clientes
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+--Auditoria Insert
+IF EXISTS(SELECT * from inserted) AND 
+	NOT EXISTS(SELECT * from deleted)
+BEGIN
+	Insert INTO AuditoriaClientes(Operacion,ClienteID,
+	Nombre,Apellido,Usuario)
+	SELECT 'Insertado', i.ClienteID,
+	i.Nombre,i.Apellido,SUSER_NAME()
+	FROM inserted i
+END
+--Auditoria Update
+IF EXISTS (Select * from inserted) AND
+EXISTS( Select * from deleted)
+BEGIN
+	Insert INTO AuditoriaClientes(Operacion,ClienteID,
+	Nombre,Apellido,Usuario)
+	SELECT 'Actualizado',i.ClienteID,
+	i.Nombre, i.Apellido, SUSER_NAME()
+	FROM inserted i
+END
+--Auditoria Eliminado
+if EXISTS (select * from deleted) AND 
+NOT EXISTS(select * from inserted)
+BEGIN
+Insert INTO AuditoriaClientes(Operacion,ClienteID,
+	Nombre,Apellido,Usuario)
+	SELECT 'Eliminado', d.ClienteID,
+	d.Nombre, d.Apellido, SUSER_NAME()
+	FROM deleted d
+END
+END;
